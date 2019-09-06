@@ -1,5 +1,6 @@
 pub(crate) mod deserializer;
 pub(crate) mod hir;
+pub(crate) mod lite;
 pub(crate) mod parse;
 pub(crate) mod parse_command;
 pub(crate) mod registry;

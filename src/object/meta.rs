@@ -126,6 +126,15 @@ impl<T> Tagged<T> {
     }
 }
 
+impl From<(usize, usize, Uuid)> for Tag {
+    fn from((left, right, uuid): (usize, usize, Uuid)) -> Tag {
+        Tag {
+            origin: Some(uuid),
+            span: (left, right).into(),
+        }
+    }
+}
+
 impl<T> From<&Tagged<T>> for Span {
     fn from(input: &Tagged<T>) -> Span {
         input.span()
