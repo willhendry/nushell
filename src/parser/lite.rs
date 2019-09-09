@@ -5,6 +5,7 @@
 // External commands treat every token as a bare word unless it starts with `$` or is `|`
 // Internal commands have a rich vocabulary of literals and operators.
 
+mod atoms;
 mod builder;
 mod delimited_node;
 mod graphemes;
